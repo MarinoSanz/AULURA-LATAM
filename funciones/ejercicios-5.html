@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<H1>PROGRAMA AÑO MUNDIAL</H1>
+
+<Script>
+    function saltarLinea() {
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>");    
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var anhoMundial = 1930;
+    var limite = parseInt(prompt("Ingrese el año limite para calcular"))
+
+    while (anhoMundial <= limite) {
+        imprimir("hubo mundial de la FIFA  en el año " + anhoMundial);
+        anhoMundial = anhoMundial +4;
+        
+    }
+    alert("fin")
+
+</Script>
+<script>
+     //¡Correcto! La declaración for se divide en tres partes que están separadas por un punto y coma. La primera se usa para declarar la variable que usaremos como contador, la segunda para la condición de repetición y la última para el incremento de la variable contador.
+
+     //De hecho, cuando queremos incrementar uno por uno, podemos usar el incremento posterior:
+
+    for( var contador = 1; contador <= 10; contador++ ) {
+        alert("Contador actual: " + contador);
+    }
+
+    //Ten en cuenta que usamos contador++ en lugar de contador=contador + 1. La primera forma es mucho más ágil.
+</script>

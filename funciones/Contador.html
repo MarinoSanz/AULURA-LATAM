@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+   <h1>Repetir tareas y actividades con iteraciones while.
+       Repetir tareas y actividades con iteraciones for.
+       Interrumpir iteraciones con break.
+       Realizar iteraciones anidadas, un loop dentro de otro.</h1>
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+    var contador = 1;
+
+    while (contador <= 3) {
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            
+        } else {
+            alert("inicio de sesión inválido. Favor intente de nuevo");
+        }
+        break;
+        
+    }
+    contador = contador + 1;
+   
+</script>
+
+<script>
+     //Vamos a crear una variable de incremento llamada intentoActual y vamos asignarle el valor de 1 para inicializar, y una variable con el límite de intentos llamada maximoIntentos que asignaremos el valor de 3.
+
+     //Luego creamos un Loop usando while, donde vamos a usar la condición de que vamos a ejecutar el while mientras intentoActual sea menor o igual maximoIntentos, si el usuario pasa de los 3 intentos debemos informar al usuario que agotó el número de intentos.
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var maximoIntentos = 3;
+    var intentoActual = 1;
+
+    while(intentoActual <= maximoIntentos){
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if(inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada){
+            alert("Bienvenido al sistema" + inicioDeSesionIngresado);
+            intentoActual = maximoIntentos; // Lo hice bien, así que paso todos los intentos que falten y salgo del loop. Allá abajo aumentará +1! 
+        } else {
+            if (intentoActual == 3) {
+                alert("Agotaste el número permitido de intentos!");
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+            }
+        }
+
+       // vaya al próximo intento 
+        intentoActual = intentoActual +1  
+    }
+    //En vez de usar intentoActual = intentoActual + 1 podemos usar intentoActual++ que es un atajo para cuando queremos incrementar una variable.
+
+</script>
